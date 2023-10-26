@@ -1,40 +1,45 @@
-import java.util.Scanner;
+import java.awt.geom.Area;
 
+/**
+ * Clase para una Figura Geometrica
+ */
 class FiguraGeometrica {
 
-    public double base;
-    public double altura;
-    private double radio;
-    private double diametro;
-    public String nombre;
+    private String nombre;
+    private String color;
 
-    public FiguraGeometrica(String nombre) {
+    /**
+     * Constructor de la clase.
+     *
+     * @param nombre nombre del triangulo
+
+     * @param color color del triangulo
+
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
+
+    public FiguraGeometrica(String nombre, String color) {
         this.nombre = nombre;
-        this.altura = altura;
-        this.base = base;
-        this.radio = radio;
+        this.color = color;
     }
-
+    /**
+     * Método para imprimir en consola el nombre y color de la figura geometrica y obtener el Area
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
     public double obtenerArea() {
-        return 0.5 * base * altura;
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Color: " + color);
+        return 0.0;
     }
-
+    /**
+     * Método para obtener el promedio de la figura geometrica
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
     public double obtenerPerimetro() {
-        double lado1 = base;
-        double lado2 = Math.sqrt((base / 2) * (base / 2) + altura * altura);
-        double lado3 = lado2;
-
-        return lado1 + lado2 + lado3;
+        return 0.0;
     }
-    public double obtenerDiametro() {
-        return 2 * radio;
-    }
-    public void mostrarInfo() {
-        System.out.println("Nombre de la figura: " + nombre);
-    }
-
-
-
-
 
 }

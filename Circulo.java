@@ -1,34 +1,48 @@
-class Circulo extends FiguraGeometrica {
-    private double radio;
-    private double diametro;
+/**
+ * Clase Circulo que hereda de FiguraGeometrica.
+ */
+class  Circulo extends FiguraGeometrica {
 
-    public Circulo(String nombre, double radio) {
-        super(nombre);
-        this.radio = radio;
-        this.diametro = diametro;
-    }
+    private  double radio;
+    /**
+     * Constructor de la clase Circulo.
+     *
+     * @param radio
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
+    public Circulo( String nombre, String color, double radio) {
+        super  (nombre, color);
+        this.radio=radio;
 
-    public double obtenerRadio() {
-        return radio;
     }
-
-    public double obtenerDiametro() {
-        return 2 * radio; // Cálculo del diámetro
-    }
-    @Override
-    public void mostrarInfo() {
-        super.mostrarInfo();
-        System.out.println("Radio del círculo: " + obtenerRadio());
-        System.out.println("Diámetro del círculo: " + obtenerDiametro());
-    }
+    /**
+     * Método para obtener el area del circulo
+     *
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
 
     @Override
     public double obtenerArea() {
-        return Math.PI * radio * radio;
+        super.obtenerArea();
+        double area= Math.PI * radio * radio;
+        System.out.println("Area: " + area);
+        return  area;
     }
+
+    /**
+     * Método para obtener el perimetro del circulo
+     *
+     *
+     * Complejidad temporal: O(1) Tiempo constante.
+     */
 
     @Override
     public double obtenerPerimetro() {
-        return 2 * Math.PI * radio;
+        super.obtenerPerimetro();
+        double  perimetro= 2 * Math.PI * radio;
+        System.out.println("Perimetro: " +  perimetro);
+        return  perimetro;
     }
 }
